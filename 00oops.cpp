@@ -7,6 +7,21 @@ private:
     double salary;
     //properties or Attributes
 public:
+
+    // Non-parameterized
+    Teacher(){
+        cout<<"Hi, I am constructor\n";
+        dept = "Computer Science";
+    }
+
+    //parameterized
+    Teacher(string n, string d, string s, double sal){
+        name = n;
+        dept = d;
+        subject = s;
+        salary = sal;
+    }
+
     string name;
     string dept;
     string subject;
@@ -15,23 +30,15 @@ public:
     void changeDept(string newDept){
         dept = newDept;
     }
-    //setter
-    void setSalary(double s){
-        salary = s;
-    }
-    //getter
-    double getSalary(){
-        return salary;
+    
+    void getInfo(){
+        cout<<"name : "<<name<<endl;
+        cout<<"subject : "<<subject<<endl;
     }
 };
 
 int main(){
-    Teacher t1;
-    t1.name = "Shraddha";
-    t1.dept = "Computer Science";
-    t1.subject = "C++";
-    t1.setSalary(25000);
-    cout<<t1.name<<endl;
-    cout<<t1.getSalary()<<endl;
+    Teacher t1("Shraddha", "ComputerScience", "C++",25000);  //constructor call
+    t1.getInfo();
     return 0;
 }
