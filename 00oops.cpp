@@ -7,6 +7,9 @@ private:
     double salary;
     //properties or Attributes
 public:
+    string name;
+    string dept;
+    string subject;
 
     // Non-parameterized
     Teacher(){
@@ -15,16 +18,14 @@ public:
     }
 
     //parameterized
-    Teacher(string n, string d, string s, double sal){
-        name = n;
-        dept = d;
-        subject = s;
-        salary = sal;
+    Teacher(string name, string dept, string subject, double salary){
+        this->name = name;
+        this->dept = dept;
+        this->subject = subject;
+        this->salary = salary;
     }
 
-    string name;
-    string dept;
-    string subject;
+    
 
     //methods or member functions
     void changeDept(string newDept){
