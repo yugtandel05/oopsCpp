@@ -41,5 +41,8 @@ public:
 int main(){
     Teacher t1("Shraddha", "ComputerScience", "C++",25000);  //constructor call
     t1.getInfo();
+
+    Teacher t2(t1);
+    t2.getInfo();
     return 0;
 }
