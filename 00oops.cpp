@@ -24,8 +24,14 @@ public:
         this->subject = subject;
         this->salary = salary;
     }
-
-    
+    //creating a copy constructor
+    Teacher(Teacher &orgObj){
+        cout<<"I am a custom copy constructor....\n";
+        this->name = orgObj.name;
+        this->dept = orgObj.dept;
+        this->subject = orgObj.subject;
+        this->salary = orgObj.salary;
+    }
 
     //methods or member functions
     void changeDept(string newDept){
@@ -44,5 +50,6 @@ int main(){
 
     Teacher t2(t1);
     t2.getInfo();
+
     return 0;
 }
