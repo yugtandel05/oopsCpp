@@ -17,7 +17,7 @@ Types of Consturctors
 
 */
 // this Pointer -> this is a special pointer in C++ that points to the current object.
-// this-> prop is same as *(this).prop
+// this->prop is same as *(this).prop
 /*
 for eg
 int x = 10
