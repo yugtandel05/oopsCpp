@@ -25,7 +25,7 @@ int* p = x  // here, pointer p is storing address of x (let say 'hx1234')
 cout<<p<<;  // --> hx1233
 cout<<*p<<; // It will give you 'value at address' of x i.e --> 10
 
-So, 'this' is a pointer and *(this).prop is 'value at address' of object
+So, 'this' is a pointer and *(this).prop is 'value at address' of object's property
 And 'this->prop' is shortcut way of writing *(this).prop
 */
 
