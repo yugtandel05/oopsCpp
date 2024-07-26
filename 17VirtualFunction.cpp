@@ -1,5 +1,7 @@
 //Runtime polymorphism
 /*
+A virtual function in C++ is a function that you expect to be overridden in derived classes. When you call a virtual function through a base class pointer or reference, the call is resolved at runtime to the correct overridden function in the derived class. This behavior is known as runtime polymorphism.
+
 Virtual Functions --> A virtual function is a member function that you expect to be redefined in derived classes.
 Virtual funcion property:-  
 -- Virtual functions are Dynamic in nature.
@@ -17,18 +19,31 @@ public:
     }
 };
 
-class Child{
+class Son : public Parent{
 public:
-    void hello(){
-        cout<<"Hello from child"<<endl;
+    void hello() override {
+        cout<<"Hello from Son"<<endl;
+    }
+};
+
+class Daughter : public Parent{
+    void hello() override {
+        cout<<"Hello from Daughter"<<endl;
     }
 };
 
 int main(){
-    Child c1;
-    c1.hello();      
+    Parent* p1;
+    Son s1;
+    Daughter d1;
+
+    p1 = &s1;
+    (*p1).hello();     // (*p1).hello is same as p1->hello
+
+    p1 = &d1;
+    p1->hello();
+          
 
     return 0;
 }
 
-//There is more about Virtual funcion. I will study later
